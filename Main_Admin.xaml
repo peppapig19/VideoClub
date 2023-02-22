@@ -1,0 +1,31 @@
+﻿<Window x:Class="VideoClub.Main_Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Системный администратор" Height="450" Width="800" Closed="Window_Closed">
+
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top" FontSize="20">
+            <Button Name="orders_button" Content="Заказы" Click="orders_button_Click" />
+            <Button Name="films_button" Content="Каталог фильмов" Click="films_button_Click" />
+            <Button Name="cassettes_button" Content="Кассеты" Click="cassettes_button_Click" />
+            <Button Name="checking_button" Content="КП" Click="checking_button_Click" />
+            <Button Name="members_button" Content="Члены клуба" Click="members_button_Click" />
+            <Button Name="librarians_button" Content="Библиотекари" Click="librarians_button_Click" />
+            <Button Name="accounts_button" Content="Аккаунты" Click="accounts_button_Click" />
+        </ToolBar>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <DataGrid Name="dataGridView"/>
+
+            <Button Name="save_button" Grid.Row="1" Margin="10" HorizontalAlignment="Left" Content="Сохранить" Click="save_button_Click" />
+        </Grid>
+    </DockPanel>
+</Window>

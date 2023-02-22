@@ -1,0 +1,21 @@
+﻿<Window x:Class="VideoClub.Main_Librarian"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Библиотекарь" Height="450" Width="800" Closed="Window_Closed">
+
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top" FontSize="20">
+            <Button Name="orders_button" Content="Заказы" Click="orders_button_Click" />
+            <Button Name="films_button" Content="Каталог фильмов" Click="films_button_Click" />
+            <Button Name="cassettes_button" Content="Кассеты" Click="cassettes_button_Click" />
+            <Button Name="checking_button" Content="КП" Click="checking_button_Click" />
+            <Button Name="members_button" Content="Члены клуба" Click="members_button_Click" />
+            <Button Content="Справка" />
+        </ToolBar>
+
+        <Frame Name="frame" NavigationUIVisibility="Hidden" />
+    </DockPanel>
+</Window>

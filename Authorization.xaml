@@ -1,0 +1,30 @@
+﻿<Window x:Class="VideoClub.Authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="250" Width="500">
+
+    <StackPanel VerticalAlignment="Center">
+        <Grid HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Логин:" />
+            <Label Grid.Row="1" Content="Пароль:" />
+
+            <TextBox Name="login_textBox" Grid.Column="1" HorizontalAlignment="Left" Width="150" />
+            <PasswordBox Name="passwordBox" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Width="150" />
+        </Grid>
+
+        <Button Name="login_button" Margin="10" HorizontalAlignment="Center" Content="Войти" Click="login_button_Click" />
+    </StackPanel>
+</Window>

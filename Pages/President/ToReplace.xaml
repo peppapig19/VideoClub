@@ -1,0 +1,19 @@
+﻿<Page x:Class="VideoClub.ToReplace"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Требуется замена" Background="White" Loaded="Page_Loaded">
+
+    <Grid>
+        <DataGrid Name="dataGridView" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер" Binding="{Binding id}"/>
+                <DataGridTextColumn Header="Осталось просмотров" Binding="{Binding views_left}"/>
+                <DataGridTextColumn Header="Дефекты" Binding="{Binding defects}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

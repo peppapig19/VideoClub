@@ -1,0 +1,40 @@
+﻿<Window x:Class="VideoClub.AddChecking"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Данные проверки" Height="200" Width="300" Loaded="Window_Loaded">
+
+    <ScrollViewer>
+        <DockPanel LastChildFill="False" Margin="2">
+            <Grid DockPanel.Dock="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Номер кассеты:" />
+                <Label Grid.Row="1" Content="Дата проверки:" />
+                <Label Grid.Row="2" FontWeight="Bold"  Content="При наличии дефектов" />
+                <Label Grid.Row="3" Content="Дефекты:" />
+                <Label Grid.Row="4" Content="Исправлено:" />
+
+                <Label Name="cassette_id_label" Grid.Column="1" />
+                <DatePicker Name="checked_datePicker" Grid.Row="1" Grid.Column="1" />
+                <TextBox Name="defects_textBox" Grid.Row="3" Grid.Column="1" MinLines="3" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" />
+                <CheckBox Name="fixed_checkBox" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" />
+            </Grid>
+
+            <Button Name="save_button" DockPanel.Dock="Bottom" HorizontalAlignment="Center" Content="Сохранить" Click="save_button_Click" />
+        </DockPanel>
+    </ScrollViewer>
+</Window>

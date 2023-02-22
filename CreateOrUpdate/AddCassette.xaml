@@ -1,0 +1,30 @@
+﻿<Window x:Class="VideoClub.AddCassette"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Данные кассеты" Height="150" Width="250" Loaded="Window_Loaded">
+
+    <DockPanel LastChildFill="False" Margin="2">
+        <Grid DockPanel.Dock="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Номер фильма:" />
+            <Label Grid.Row="1" Content="Осталось просмотров:" />
+
+            <Label Name="film_id_label" Grid.Column="1" />
+            <TextBox Name="views_textBox" Grid.Row="1" Grid.Column="1" Text="30" />
+        </Grid>
+
+        <Button Name="save_button" DockPanel.Dock="Bottom" HorizontalAlignment="Center" Content="Сохранить" Click="save_button_Click" />
+    </DockPanel>
+</Window>

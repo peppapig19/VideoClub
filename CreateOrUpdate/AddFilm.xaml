@@ -1,0 +1,47 @@
+﻿<Window x:Class="VideoClub.AddFilm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Данные фильма" Height="300" Width="300" Loaded="Window_Loaded">
+
+    <ScrollViewer>
+        <DockPanel LastChildFill="False" Margin="2">
+            <Grid DockPanel.Dock="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Название:" />
+                <Label Grid.Row="1" Content="Режиссёр:" />
+                <Label Grid.Row="2" Content="Актёр 1:" />
+                <Label Grid.Row="3" Content="Актёр 2:" />
+                <Label Grid.Row="4" Content="Год:" />
+                <Label Grid.Row="5" Content="Киностудия:" />
+                <Label Grid.Row="6" Content="Описание:" />
+
+                <TextBox Name="name_textBox" Grid.Column="1" />
+                <TextBox Name="director_textBox" Grid.Row="1" Grid.Column="1" />
+                <TextBox Name="actor1_textBox" Grid.Row="2" Grid.Column="1" />
+                <TextBox Name="actor2_textBox" Grid.Row="3" Grid.Column="1" />
+                <TextBox Name="year_textBox" Grid.Row="4" Grid.Column="1" />
+                <TextBox Name="studio_textBox" Grid.Row="5" Grid.Column="1" />
+                <TextBox Name="description_textBox" Grid.Row="6" Grid.Column="1" MinLines="5" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" />
+            </Grid>
+
+            <Button Name="save_button" DockPanel.Dock="Bottom" HorizontalAlignment="Center" Content="Сохранить" Click="save_button_Click" />
+        </DockPanel>
+    </ScrollViewer>
+</Window>
